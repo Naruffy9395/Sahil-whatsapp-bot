@@ -5,119 +5,91 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sahyom AI | Aapka WhatsApp, 24 ghante khud jawab de</title>
 <meta name="description" content="Dukaan, gym, salon, coaching ke liye WhatsApp AI assistant. Customer ke sawal, order aur appointment bot sambhalta hai.">
-<style>
-:root{--bg:#f5f8f7;--ink:#12201c;--mute:#52635e;--line:#d5e0dc;--teal:#0b7a64;--on:#fff;--bub:#d9fdd3;--cust:#fff;--box:#fff6dd;--boxl:#ecd9a0}
-@media (prefers-color-scheme:dark){:root{--bg:#0e1815;--ink:#e8f1ee;--mute:#9db1ab;--line:#26382f;--teal:#2fb994;--on:#06231b;--bub:#0f4a3a;--cust:#1b2c27;--box:#2a2410;--boxl:#5c4d1c}}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Segoe UI",Roboto,system-ui,sans-serif}
-.w{max-width:720px;margin:0 auto;padding:0 20px}
-header{padding:18px 0;font-weight:700;font-size:18px}
-h1{font-size:clamp(30px,8vw,46px);line-height:1.12;margin:18px 0 14px;letter-spacing:-.02em}
-h2{font-size:24px;line-height:1.25;margin:0 0 14px}
-p{margin:0 0 14px;max-width:62ch}
-.lead{font-size:18px;color:var(--mute)}
-.btn{display:inline-block;background:var(--teal);color:var(--on);font:inherit;font-weight:700;border:0;border-radius:10px;padding:14px 22px;text-decoration:none;cursor:pointer}
-.btn:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
-.chat{margin:30px 0 8px;background:var(--line);border-radius:16px;padding:16px;max-width:420px}
-.chat small{display:block;color:var(--mute);margin-bottom:10px;font-size:13px}
-.m{padding:9px 13px;border-radius:12px;margin:0 0 8px;max-width:85%;font-size:15px;line-height:1.45}
-.c{background:var(--cust)}
-.b{background:var(--bub);margin-left:auto}
-section{padding:44px 0;border-top:1px solid var(--line)}
-dl{margin:0}
-dt{font-weight:700;margin-top:16px}
-dd{margin:2px 0 0;color:var(--mute);max-width:62ch}
-ol{padding-left:22px;margin:0}
-li{margin-bottom:10px;max-width:62ch}
-.safe{background:var(--box);border:1px solid var(--boxl);border-radius:12px;padding:18px 20px}
-.safe p{margin:0 0 10px}
-.safe p:last-child{margin:0}
-form{display:grid;gap:14px;max-width:460px}
-label{display:grid;gap:6px;font-weight:600}
-input,select{font:inherit;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--cust);color:var(--ink)}
-.err{color:#c2410c;min-height:1.3em;margin:0;font-size:14px}
-footer{padding:30px 0 50px;color:var(--mute);font-size:14px;border-top:1px solid var(--line)}
-</style>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
 <body>
-<div class="w">
-<header>Sahyom AI</header>
 
-<h1>Customer raat 11 baje bhi message kare, jawab turant mile.</h1>
-<p class="lead">WhatsApp par rate, timing, order aur appointment ke sawal ab bot sambhalta hai. Aap apna kaam kijiye.</p>
-<a class="btn" href="#shuru">Apna bot shuru karein</a>
+<header class="top">
+  <div class="w bar">
+    <a class="logo" href="#">Sahyom AI</a>
+    <a class="btn small" href="#shuru">Trial lein</a>
+  </div>
+</header>
 
-<div class="chat" aria-label="Bot ki baatcheet ka example">
-<small>Example: salon ka WhatsApp, raat 11:04</small>
-<p class="m c">Bhaiya, kal subah haircut ka time milega?</p>
-<p class="m b">Ji, kal subah 10 aur 11:30 ka slot khali hai. Haircut Rs 150. Kaun sa time rakhun?</p>
-<p class="m c">10 baje</p>
-<p class="m b">Ho gaya. Kal 10 baje aapka naam likh liya. Pata: Station Road, Fatehpur.</p>
-</div>
-
-<section>
-<h2>Bot kya kar sakta hai</h2>
-<dl>
-<dt>Sawalon ke jawab</dt><dd>Timing, rate, service, pata. Hindi, Hinglish ya English, jis bhasha mein customer likhe.</dd>
-<dt>Order aur appointment</dt><dd>Naam, cheez, matra aur samay puchh kar aapko turant bata deta hai.</dd>
-<dt>Voice note</dt><dd>Customer awaaz bheje to bot sunkar samajhta hai aur jawab deta hai.</dd>
-<dt>Roz ki report</dt><dd>Kaun customer khareedne ko taiyaar hai, kitne order aaye, sab ek jagah. Excel file bhi WhatsApp par.</dd>
-<dt>Aapka control</dt><dd>Kisi bhi chat mein aap khud baat karna chahein to ek command se bot ruk jata hai.</dd>
-<dt>Aapke business ki jaankari</dt><dd>Apne hi WhatsApp mein Hindi mein likhkar sikhaiye, jaise "Sunday ko dukaan band rahegi". Coding nahi.</dd>
-</dl>
+<main>
+<section class="hero w">
+  <div class="hero-text">
+    <h1>Customer raat 11 baje bhi message kare, jawab turant mile.</h1>
+    <p class="lead">Rate, timing, order aur appointment ke sawal ab WhatsApp bot sambhalta hai. Aap apna kaam kijiye.</p>
+    <a class="btn" href="#shuru">Apna bot shuru karein</a>
+  </div>
+  <div class="chat" aria-label="Bot ki baatcheet ka example">
+    <p class="chat-head">Salon ka WhatsApp, raat 11:04</p>
+    <p class="m c">Bhaiya, kal subah haircut ka time milega?</p>
+    <p class="m b">Ji, kal subah 10 aur 11:30 ka slot khali hai. Haircut Rs 150. Kaun sa time rakhun?</p>
+    <p class="m c">10 baje</p>
+    <p class="m b">Ho gaya. Kal 10 baje aapka naam likh liya. Pata: Station Road, Fatehpur.</p>
+  </div>
 </section>
 
-<section>
-<h2>Shuru kaise hota hai</h2>
-<ol>
-<li>Neeche naam, number aur business batayein. Aapki request seedhi mere WhatsApp par aayegi.</li>
-<li>Main aapke business ke 5 chhote sawal puchhunga: kya bechte hain, rate, timing, pata.</li>
-<li>Bot ko aapke number se jod diya jata hai (5 minute ka kaam).</li>
-<li>Pehle chhota trial. Pasand na aaye to kuch nahi dena.</li>
-</ol>
+<section class="w block" id="kaam">
+  <h2>Bot kya kar sakta hai</h2>
+  <dl class="feat">
+    <div><dt>Sawalon ke jawab</dt><dd>Timing, rate, service, pata. Hindi, Hinglish ya English, jis bhasha mein customer likhe.</dd></div>
+    <div><dt>Order aur appointment</dt><dd>Naam, cheez, matra aur samay puchh kar aapko turant bata deta hai.</dd></div>
+    <div><dt>Voice note</dt><dd>Customer awaaz bheje to bot sunkar samajhta hai aur jawab deta hai.</dd></div>
+    <div><dt>Roz ki report</dt><dd>Kaun customer khareedne ko taiyaar hai, kitne order aaye. Excel file bhi WhatsApp par.</dd></div>
+    <div><dt>Aapka control</dt><dd>Kisi bhi chat mein khud baat karni ho to ek command se bot ruk jata hai.</dd></div>
+    <div><dt>Hindi mein sikhaiye</dt><dd>Apne WhatsApp mein likhiye, jaise "Sunday ko dukaan band rahegi". Coding nahi.</dd></div>
+  </dl>
 </section>
 
-<section>
-<h2>Seedhi baat</h2>
-<div class="safe">
-<p><b>Aapka personal data safe rahe</b> isliye business ke liye <b>alag number ya SIM</b> use karein. Bot sirf us number ki WhatsApp chats dekhta hai. SMS, gallery aur baaki apps tak uski pahunch nahi.</p>
-<p><b>Ek risk jo hum chhupate nahi:</b> ye WhatsApp ka official tareeka nahi, WhatsApp Web jaisa link hai. Isliye bahut kam sambhavna hai ki WhatsApp us number par rok laga de. Bot sirf unhe jawab deta hai jo pehle message karein.</p>
-<p>Aap kabhi bhi WhatsApp mein Settings, phir Linked Devices se bot ko hata sakte hain.</p>
-</div>
+<section class="w block" id="tareeka">
+  <h2>Shuru kaise hota hai</h2>
+  <ol class="steps">
+    <li><b>Form bhariye.</b> Aapki request seedhi mere WhatsApp par aati hai.</li>
+    <li><b>5 chhote sawal.</b> Kya bechte hain, rate, timing, pata.</li>
+    <li><b>Bot jud jata hai.</b> Aapke number par, 5 minute mein.</li>
+    <li><b>Pehle chhota trial.</b> Pasand na aaye to kuch nahi dena.</li>
+  </ol>
 </section>
 
-<section id="shuru">
-<h2>Apna bot shuru karein</h2>
-<p>Form bhariye. Button dabane par WhatsApp khulega aur aapki jaankari mere paas pahunch jayegi.</p>
-<form id="f" novalidate>
-<label>Aapka naam<input id="n" autocomplete="name" required></label>
-<label>WhatsApp number<input id="p" inputmode="numeric" autocomplete="tel" placeholder="10 ank, bina +91" maxlength="10" required></label>
-<label>Aapka business
-<select id="t">
-<option>Dukaan</option><option>Gym</option><option>Salon</option><option>Coaching</option><option>Clinic</option><option>Restaurant</option><option>Doosra</option>
-</select></label>
-<p class="err" id="e" role="alert"></p>
-<button class="btn" type="submit">WhatsApp par bhejein</button>
-</form>
+<section class="w block" id="safe">
+  <h2>Seedhi baat</h2>
+  <div class="safe">
+    <p><b>Business ke liye alag number ya SIM</b> use karein, apna personal WhatsApp na jodein. Bot sirf us number ki WhatsApp chats dekhta hai. SMS, gallery aur baaki apps tak uski pahunch nahi.</p>
+    <p><b>Ek risk jo hum chhupate nahi:</b> ye WhatsApp ka official tareeka nahi, WhatsApp Web jaisa link hai. Isliye bahut kam sambhavna hai ki WhatsApp us number par rok laga de. Bot sirf unhe jawab deta hai jo pehle message karein.</p>
+    <p>Aap kabhi bhi WhatsApp mein Settings, phir Linked Devices se bot ko hata sakte hain.</p>
+  </div>
 </section>
 
-<footer>Sahyom AI. Sahil, WhatsApp +91 95591 24698</footer>
-</div>
+<section class="w block" id="sawal">
+  <h2>Aam sawal</h2>
+  <details><summary>Kya bot meri sab chats padh lega?</summary><p>Bot sirf us number ki WhatsApp chats dekhta hai jis par wo juda hai. Isliye alag business number rakhein.</p></details>
+  <details><summary>Bot galat jawab de to?</summary><p>Bot sirf wahi batata hai jo aapne sikhaya hai. Jo nahi pata, wo andaza nahi lagata, aapko bata deta hai.</p></details>
+  <details><summary>Kya mujhe coding aani chahiye?</summary><p>Bilkul nahi. Sab kuch Hindi mein WhatsApp par likhkar hota hai.</p></details>
+  <details><summary>Price kitna hai?</summary><p>Pehle trial hota hai. Price aur message limit shuru karne se pehle saaf bata di jati hai.</p></details>
+</section>
 
-<script>
-document.getElementById("f").addEventListener("submit",function(ev){
-  ev.preventDefault();
-  var n=document.getElementById("n").value.trim(),
-      p=document.getElementById("p").value.replace(/\D/g,""),
-      t=document.getElementById("t").value,
-      e=document.getElementById("e");
-  if(n.length<2){e.textContent="Naam likhiye.";return;}
-  if(!/^[6-9]\d{9}$/.test(p)){e.textContent="10 ank ka sahi WhatsApp number likhiye.";return;}
-  e.textContent="";
-  var msg="Namaste, mera naam "+n+" hai. Mera business: "+t+". WhatsApp number: "+p+". Mujhe Sahyom AI bot ka trial chahiye.";
-  window.location.href="https://wa.me/919559124698?text="+encodeURIComponent(msg);
-});
-</script>
+<section class="w block" id="shuru">
+  <h2>Apna bot shuru karein</h2>
+  <p>Form bhariye. Button dabane par WhatsApp khulega aur aapki jaankari mere paas pahunch jayegi.</p>
+  <form id="f" novalidate>
+    <label>Aapka naam<input id="n" autocomplete="name" required></label>
+    <label>WhatsApp number<input id="p" inputmode="numeric" autocomplete="tel" placeholder="10 ank, bina +91" maxlength="10" required></label>
+    <label>Aapka business
+      <select id="t">
+        <option>Dukaan</option><option>Gym</option><option>Salon</option><option>Coaching</option><option>Clinic</option><option>Restaurant</option><option>Doosra</option>
+      </select>
+    </label>
+    <p class="err" id="e" role="alert"></p>
+    <button class="btn" type="submit">WhatsApp par bhejein</button>
+  </form>
+</section>
+</main>
+
+<footer class="w foot">Sahyom AI. Sahil, WhatsApp +91 95591 24698</footer>
+
 </body>
 </html>
